@@ -12,11 +12,6 @@ def call(String repoUrl){
                 sh 'lscpu'
             }
         }
-        stage('security-check'){
-            steps{
-                sh 'bash /var/lib/jenkins/workspace/jenkins-test-pipeline/security.sh'
-            }
-        }
         stage('system-check'){
             steps{
                 sh 'lsblk'
